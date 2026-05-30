@@ -1,0 +1,24 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Cleaning old dependencies..."
+      - rm -rf .venv venv
+      - pip cache purge
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Build completed"
+artifacts:
+  files:
+    - '**/*'
+  exclude-paths:
+    - '__pycache__'
+    - '*.pyc'
+    - '.venv'
+    - 'venv'

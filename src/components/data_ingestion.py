@@ -17,7 +17,7 @@ import sys
 # This helps in showing detailed custom error messages
 from src.exception import CustomException
 
-# Importing logging functionality
+# Importing logging functionality v
 # Logging helps us track execution step-by-step
 from src.logger import logging
 
@@ -31,13 +31,52 @@ import pandas as pd
 # - training data
 # - testing data
 from sklearn.model_selection import train_test_split
-
-# dataclass automatically creates constructor (__init__)
-# and simplifies configuration classes
+# Importing dataclass decorator
 from dataclasses import dataclass
+
+
+# @dataclass automatically creates constructor (__init__)
+# so we do not need to write it manually.
+#
+# It is mainly used for storing variables/configurations neatly.
+#
+# Example:
+#
+# Without dataclass:
+#
+# class Student:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#
+#
+# With dataclass:
+#
+# @dataclass
+# class Student:
+#     name:str
+#     age:int
+#
+# Python automatically creates the constructor internally.
+#
+# This makes code:
+# - shorter
+# - cleaner
+# - easier to read
+#
+# Commonly used in ML projects for:
+# - file paths
+# - configurations
+# - model parameters
 
 # Importing DataTransformation class
 # This class handles preprocessing and feature engineering
+"""means:
+
+Go inside src folder
+then inside components folder
+then open data_transformation.py file
+and import the class named DataTransformation"""
 from src.components.data_transformation import DataTransformation
 
 # Importing configuration class for DataTransformation
@@ -198,8 +237,7 @@ artifacts/"""
 # If this file is being run directly,
 # then execute below code
 #
-# If imported somewhere else,
-# this block will not execute
+
 if __name__ == "__main__":
 
 
