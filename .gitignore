@@ -1,16 +1,36 @@
+echo "# Python
 __pycache__/
 *.pyc
-.venv/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
 venv/
+.venv/
+env/
+.env/
+
+# IDE
 .vscode/
-.git/
 .idea/
-*.pkl
-*.joblib
+*.swp
+*.swo
+
+# Project specific
 catboost_info/
 artifacts/
 logs/
 notebook/
+*.pkl
+*.joblib
 *.zip
+
+# OS
 .DS_Store
-.env
+Thumbs.db" > .gitignore
