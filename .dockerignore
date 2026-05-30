@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+*.zip
+catboost_info/
+artifacts/
+logs/
+notebook/
+*.md
+Dockerfile
+.dockerignore
